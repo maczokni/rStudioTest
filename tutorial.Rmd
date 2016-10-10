@@ -272,8 +272,18 @@ It's not actually that sneaky, but if you just want a HTML page to be displayed 
 
 So for example, this markdown document I compile into a html page. I then upload it to my github. I can see it in my repository here: 
 
-Change `https://raw.githubusercontent.com/maczokni/rStudioTest/master/tutorial.html` to
-`https://rawgit.com/maczokni/rStudioTest/master/tutorial.html` and put that in a web browser
+![](findHtml.png)
+
+Then click on the file. It should open it up and look something like this. Click on where it says "View raw":
+
+![](viewRaw.png)
+
+Now you should see something like this: 
+
+![](rawLookDis.png)
+
+Take the URL and change `https://raw.githubusercontent.com/...` part to
+`https://rawgit.com/...` and put that in a web browser.
 
 Ta-daa! 
 
