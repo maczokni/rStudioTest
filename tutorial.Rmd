@@ -1,6 +1,8 @@
 ---
 title: "R + GitHub Tutorial"
-author: "Reka Solymosi"
+author: "Reka Solymosi
+<br> @r_solymosi
+<br> reka.solymosi@manchester.ac.uk"
 date: "9 October 2016"
 logo: uomLogo.png
 output:
@@ -16,6 +18,7 @@ output:
 - [Using GitHub](#sec2)
 - [R integration](#sec3)
 - [Running Shiny apps](#sec4)
+- [Github pages](#sec5)
 
 
 ##What is version control {#sec1}
@@ -104,19 +107,36 @@ Overall you can see that there is a lot going on here. This is a very busy proje
 
 OK let's get into it. So to create a github account, you'll need to sign up [here](https://github.com/).
 
-Once you have your account, you are ready to start some version control! However you want to be able to work on whatever you're working on on your own pc. To do this, there are many approaches. You can directly connect R Studio to GitHub, which we'll be doing in the next section. 
+Once you have your account, you are ready to start some version control! There are a few things that you can do directly on the github site. For example, you can set up an organisation. Since you guys want to be sharing your R code, you can set up an MMU R organisation. 
 
-You can also do this through command line/ terminal. [Here](https://help.github.com/articles/set-up-git/) is the link to some tutorials that help you do that. 
+To do so someone should create it
 
-But I guess we should learn some basic commands. To do that let's go through the [try github exercise](https://try.github.io/levels/1/challenges/1). 
+![](ivolunteer.jpg)
 
-What I do is use the GitHub desktop. You can download and set it up [here](https://desktop.github.com/). Some people really don't like it. The main issues with it (I think) are around the limitations. Within the GitHub Desktop interface, there's no way to browse existing issues in a repository, create new ones, or reply to existing items. Instead, you have to follow a link from within the program to the repository on the GitHub site. The same goes for repository wikis or graphs; you must go through the GitHub site to deal with them. However for my basic needs of essentially just archiving my work, it works amazingly. 
+Thank you brave person.
 
-You can create a new repository, or you can fork something that's already out there. Let's start by forking something. 
+OK so click on your name and in the dropdown menu select 'create organisation'
+![](createOrg.png)
 
-How about that very addicting game from a year and a bit ago 2048? There is a small clone of it [here](https://github.com/gabrielecirulli/2048) that we can try. 
+Follow through the steps.
 
-##R integration {#sec3}
+Add some members.
+
+Create a repository.
+
+Yay you now have a place to share all your code. This is one of the things you can do on the site.
+
+However you want to be able to work on whatever you're working on on your own pc. To do this, there are many approaches. You can directly connect R Studio to GitHub, which we'll be doing in the next section. 
+
+The first step however is to set up Git. You can do that by following the steps  [here](https://help.github.com/articles/set-up-git/) 
+
+It is quite common to use git from the command line. In a moment we're going to set up the GitHub desktop GUI, but in general you should learn some basic commands. To do that go through the [try github exercise](https://try.github.io/levels/1/challenges/1). 
+
+But I am lazy, and also I don't use GitHub as intricately as some do, so most of the time I use the GitHub desktop. You can download and set it up [here](https://desktop.github.com/). Some people really don't like it. The main issues with it (I think) are around the limitations. Within the GitHub Desktop interface, there's no way to browse existing issues in a repository, create new ones, or reply to existing items. Instead, you have to follow a link from within the program to the repository on the GitHub site. The same goes for repository wikis or graphs; you must go through the GitHub site to deal with them. However for my basic needs of essentially just archiving my work, it works amazingly. 
+
+Once you have set that up, you can either create a new repository, or you can fork something that's already out there. 
+
+##R Studio integration {#sec3}
 
 With R Studio there is handy integration with GitHub, so you can pull commit and push all from R studio. 
 
@@ -124,9 +144,7 @@ First, you will need to make sure that you have git installed on your computer.
 
 ### Install Git {#install-git}
 
-You need Git, so you can use it at the command line and so RStudio can call it.
-
-Follow the detailed instructions [here](http://happygitwithr.com/install-git.html) for installing git
+You need Git, so you can use it at the command line and so RStudio can call it. We've covered this in the previous section but in case you are joining in late, you can follow the detailed instructions [here](http://happygitwithr.com/install-git.html) for installing git
 
 ### Link with GitHub
 
@@ -239,4 +257,26 @@ For example, I have an app called "crimeMapTest" in my github, which you can run
 ```{r, eval=FALSE}
 runGitHub( "crimeMapTest", "maczokni") 
 ```
+
+##Github pages {#sec5}
+
+You can also use GitHub to host a page for your project, or to host a webpage for you. 
+
+For example, look at [this one](http://pracademic.io/). You can give it a go with a very easy [automatic page generator](https://help.github.com/articles/creating-pages-with-the-automatic-generator/). 
+
+More details on what is github pages and how you can use it can be found [here](https://pages.github.com/).
+
+###Super sneaky shortcut
+
+It's not actually that sneaky, but if you just want a HTML page to be displayed with github, there is a shortcut to doing this. 
+
+So for example, this markdown document I compile into a html page. I then upload it to my github. I can see it in my repository here: 
+
+Change `https://raw.githubusercontent.com/maczokni/rStudioTest/master/tutorial.html` to
+`https://rawgit.com/maczokni/rStudioTest/master/tutorial.html` and put that in a web browser
+
+Ta-daa! 
+
+
+
 
